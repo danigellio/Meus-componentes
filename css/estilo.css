@@ -1,0 +1,32 @@
+:root{
+     --primary-color: #FF7833;
+     --secondary-color: #31333B;
+}
+
+*, *::after, *::before{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+html{
+     font-size: 62,5%;
+}
+body{
+     display: flex;
+     color: #E7E7E7;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     min-height: 100vh;/*no minimo e se tiver + expande*/
+     
+}
+.main-header{
+     flex: 0 0 26rem;/*n aumenta n dimuniu e tamanho*/
+     background-color:var(--secondary-color) ;
+
+}
+.main{
+     background-color: #444856;
+}
+a {
+     color: inherit; /*para herdar a cor*/
+}
