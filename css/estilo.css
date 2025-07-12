@@ -10,7 +10,7 @@
 }
 
 html{
-     font-size: 62,5%;
+     font-size: 62.5%;
 }
 body{
      display: flex;
@@ -26,7 +26,26 @@ body{
 }
 .main{
      background-color: #444856;
+     flex: 1 0 ;
+}
+.main,
+.main-header{
+     font-size: 1.6rem;
 }
 a {
      color: inherit; /*para herdar a cor*/
+     text-decoration: none;
+     
+     
+}
+.perfil-img{
+     max-width: 10rem;
+}
+.main-nav{
+     text-align: right;
+     padding: 6.5rem 2.4rem 2.4rem;
+}
+.main-nav ul{
+     list-style-type: none;
+    
 }
