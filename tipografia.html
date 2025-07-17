@@ -52,11 +52,74 @@
 
                 <article>
                     <h2>Abreviações</h2>
-                    <p>Para criar páginas na web precisamos aprender sobre HTML</p>
-                    <p>O <dfn id="html"> <abbr title="HiperText Markup Language"> HTML</abbr> </dfn>é a principal linguagem da web onde podemos incluir nosso conteúdo de forma semântica</p>
-                    <!--DFN elemento de definicao-- É usado para indicar o termo que está sendo definido dentro do contexto de uma frase ou frase dedefinição. O elemento ancestral, mais proximo do elemento é considerado a definicao do termo-->
+                    <p>Para criar páginas na web precisamos aprender sobre<a href="#html-dfn"> <abbr title="HiperText Markup Language">HTML</abbr> </a></p>
+                    <p>O <dfn id="html-dfn"> <abbr title="HiperText Markup Language"> HTML</abbr> </dfn>é a principal linguagem da web onde podemos incluir nosso conteúdo de forma semântica</p>
+                    <!--DFN elemento de definicao-- É usado para indicar o termo que está sendo definido dentro do contexto de uma frase ou frase dedefinição. O elemento ancestral, mais proximo do elemento é considerado a definicao do termo, fazemos o link entre o A com a DFN -->
+                </article>
+
+                <!--BLOCKQUOTE,Q E CITE-->
+                <article>
+                    <h4>Citações</h4>
+                    <blockquote>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cum!</p>
+                         <cite>Ator Desconhecido</cite>
+                    </blockquote>
+
+                    <blockquote>
+                         O Elemento HTML &lt;blockquote&gt; ou elemento de citação de bloco.
+                         <cite>MDN</cite>
+                    </blockquote>
+
+                    <p>Segundo o Autor <q>Esudar é sempre bom</q></p> 
+
+                    <p>De acordo com o site da Mozilla
+                         <q cite="https://mozilla.org/en-US/about/history/details/"> Firefox foi lançada em 2004 e se tornou um grande sucesso. </q>
+                    </p>
+
+                </article>
+
+                <!--PRE,CODE,SAMP,KBD-->
+                <article>
+                    <h4>Coisas de computador</h4>
+                    <p>A propriedade <code>background</code> do css serve para colocar uma imagem de fundo.
+                    </p>
+
+                    <pre> <!--deve tirar a tabulação-->
+Este texto é um texto pré formatado.
+
+                    </pre>
+
+                    
+                    <pre>
+                         <code>
+                              article{
+                                   padding-top:1px;
+                                   padding-bottom:1px;
+                              }
+                         </code>
+                    </pre>
+
+                    <p>
+                         Apos executar o metodo  <code>push()</code> obtive o retorno <samp lang="en-US">undefines has not a push()  function</samp>
+                    </p>
+                    <p>Preciona a tecla <kbd>CTRL + C</kbd> para copiar</p>
+                </article>
+
+
+                <!--TIME, DATETIME, DEL E INS-->
+                <article>
+                    <h4>Datas e horários</h4>
+                    <p>O evento ocorrerá em <time datetime="2025-11-10">10 de Novembro de 2025</time></p>
+                    <p>O evento ocorrerá em <time datetime="2025-11-10">10/11/2025</time></p>
+                    <p>O evento ocorrerá às <time datetime="2025-11-10T20:00:00-03:00">20h00 do dia 10 de Novembro de 2025</time></p> <!---3:00é o fuso horario-->
+                    <h5 lang="en-US">JS Conference</h5>
+                    <p>O evento iniciará exatamente às <time datetime="19:00">19:00</time></p>
+
+                    <p>O evento ocorrerá às 20h00 do dia <del>10 de Novembro de 2025</del> <ins><time datetime="2025-11-11T20:00:00-03:00"> 11 de Novembro de 2025</time></ins></p>
+                    
                 </article>
           </section>
+
          
      </main>
 </body>

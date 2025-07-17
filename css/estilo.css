@@ -39,11 +39,17 @@ h3{
      padding-bottom: 1rem;
 }
 .underline{
-     text-decoration: red wavy underline; /*sulinhado correta forma de uso*/
+     text-decoration: red wavy underline; /*sulinhado correta forma de usa*/
+}
+.highlight{
+     border-left: 1px solid var(--primary-color);
+     font-size: 1.1em;
+     padding-left: 2em;
+     margin-bottom: 2.2em;
 }
 article{
-     padding-top:1px ;
-     padding-bottom: 2rem;
+     
+     padding: 1em 0;
 }
 
 .main-header{
@@ -89,11 +95,31 @@ a {
      background-color: transparent;
      transition: padding-right .2s, background-color .4s;
 
-}/*movimentaçãp*/
-.main-nav ul a:hover{
+}/*movimentaçãp, e tbm quando tiver em foco com o teclado tab*/
+.main-nav ul a:hover,
+.main-nav ul a:focus {
      background-color: var(--secondary-color-light);
      padding-right: 1rem;
 }
 .main-nav li{
+     border-bottom: 1px solid #7b7b7b;
+     padding: .4rem 0;
 
+}
+.card{
+     max-width: 740px;
+     background-color: var(--secondary-color);
+     padding: 0;
+}
+.card_content{
+     padding: .5em 1em 1em;
+}
+
+.card_content p, .card_title{
+     margin: 0;
+}
+
+.card_title{
+     font-size: 1.75em;
+     
 }
