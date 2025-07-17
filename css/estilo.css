@@ -44,14 +44,16 @@ h3{
 .highlight{
      border-left: 1px solid var(--primary-color);
      font-size: 1.1em;
-     padding-left: 2em;
+     padding: 0 0 0 2em;
      margin-bottom: 2.2em;
 }
 article{
      
      padding: 1em 0;
 }
-
+section{
+     margin-bottom: 3rem;
+}
 .main-header{
      flex: 0 0 26rem;/*n aumenta n dimuniu e tamanho*/
      background-color:var(--secondary-color) ;
@@ -88,7 +90,7 @@ a {
      display: block;
      padding: 1.2rem 0;
      text-decoration: none;
-     border-bottom: 1px solid #7b7b7b;
+     
      
      
      
@@ -122,4 +124,50 @@ a {
 .card_title{
      font-size: 1.75em;
      
+}
+.card img{
+     max-width: 100%; /*como a imagem tem 750px, colocando isso ela se adaptada nesse tamanha*/
+}
+.row{
+     display: flex;
+     gap: 1.5rem;
+     padding-top: 1.5rem;
+     justify-content: space-between;
+}
+/*listas*/
+ul ul {
+     padding-left: 3rem;
+}
+
+ol ol{
+     padding-left: 3rem;
+}
+ol ul {
+     padding-left:  3rem;
+}
+.row > *{ /*qualquer elemento que seja filho do elemente row*/
+     flex-grow: 1;
+     flex-shrink: 0;
+     flex-basis: 0%;
+     /*atalho flex: 1 0 0%*/
+     /*isso aqui vai garantir que as colunas ficam do mesmo tamanho e alhinhadas corretamente*/
+}
+.alternate{
+     list-style-type: none;
+     padding-left: 0;
+
+}
+.alternate li{
+     padding: 0;
+}
+.alternate li:not(:last-child){ /*coloco em todas as bordas exceto no ultimo filho*/
+     border-bottom: 2px solid ; /*se eu nao coloco cor, ele pega a cor da font*/
+     
+}
+
+.roman{
+     list-style-type: upper-roman; /*numeros romanos maiusculo*/
+}
+.list-emoji{
+     list-style-type: "\1F642"; /*site para pegar os codigo dos emoji -- freecodecamp.org*/
 }
