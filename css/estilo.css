@@ -2,6 +2,8 @@
      --primary-color: #FF7833;
      --secondary-color: #31333B;
      --secondary-color-light:#444856;
+     --secondary-color-dark:#23252d;
+     --default-gap: 3rem;
 }
 
 *, *::after, *::before{
@@ -19,6 +21,11 @@ body{
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      min-height: 100vh;/*no minimo e se tiver + expande*/
      line-height: 1.7;/*espaço entre linhas*/
+     
+     background-image: url(../image/bg-unsplash.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
      
 }
 h1{
@@ -56,11 +63,12 @@ section{
 }
 .main-header{
      flex: 0 0 26rem;/*n aumenta n dimuniu e tamanho*/
-     background-color:var(--secondary-color) ;
+     background-color:#31333bda ;
+
 
 }
 .main{
-     background-color: #444856;
+     background-color: rgba(68, 72, 86, 0.603);
      flex: 1 0 ;
      padding: 6.5rem 6rem 7.5rem;
 }
@@ -81,6 +89,11 @@ a {
 .main-nav{
      text-align: right;
      padding: 6.5rem 2.4rem 2.4rem;
+
+     /*para deixar menu fixo*/
+     position: sticky;
+     top: 0;
+     left: 0;
 }
 .main-nav ul{
      list-style-type: none;
@@ -130,7 +143,7 @@ a {
 }
 .row{
      display: flex;
-     gap: 1.5rem;
+     gap: var(--default-gap);
      padding-top: 1.5rem;
      justify-content: space-between;
 }
@@ -170,4 +183,117 @@ ol ul {
 }
 .list-emoji{
      list-style-type: "\1F642"; /*site para pegar os codigo dos emoji -- freecodecamp.org*/
+}
+
+/*formulario*/
+input,
+label, 
+textarea,
+select{
+     display: inline-block;
+     width: 100%;
+     box-sizing: border-box;
+     
+}
+
+
+input, textarea, select{
+     background-color: #ccc;
+     padding: 1rem;
+     border-radius: 5px;
+     border: 0;
+     outline: none; /*remove borda quando clica*/
+     margin-bottom: 1.6rem;
+
+}
+
+.row .row{
+     padding-top: 0; /*remove um padding*/
+}
+.btn{
+     background-color: var(--secondary-color);
+     border: 2px solid var(--secondary-color-dark);
+     color: white;
+     font-size: 1.2rem;
+     cursor: pointer;
+     padding:1.2rem ;
+     border-radius: 5px;
+     
+
+}
+.btn:hover, .btn:focus{ /*foco pelo teclado ou mouse*/
+     background-color: var(--secondary-color-dark);
+}
+
+/*para ter largura original, pq modificamos todos inpt, mas esse deve ter largura original*/
+input[type="radio"], input[type="checkbox"]{
+     width: auto;
+}
+
+.form-quiz{
+     width: calc(50% - var(--default-gap)/2);
+     /*ouu (50% - 1.5rem);*/
+}
+
+.btn-stroke{
+     background-color: transparent;
+}
+
+/*botoes*/
+.paragrafo-botao{
+     padding: 1rem 0;
+}
+.btn + .btn{
+     margin-left: 2rem;
+}
+.btn-big{
+     font-size: 1.6rem;
+}
+.btn-full{
+     display: inline-block;
+     width: 100%;
+     box-sizing: border-box;
+
+}
+.btn-full + .btn-full{
+     margin-left: 0;
+     margin-top: 2rem;
+}
+/*tabela*/
+.table{
+     width: 100%;
+     border-collapse: collapse;
+     
+}
+.table td:last-child,
+.table th:last-child{
+     text-align: right;
+}
+.table td, 
+.table th{
+     
+     padding: 1.6rem;
+     
+}
+.table:not(.table-alternate) td,
+.table:not(.table-alternate) th{
+     border-bottom: 2px solid var(--secondary-color-dark);
+}
+.table th{
+     text-transform: uppercase;
+     text-align: left;
+}
+.table-alternate tbody tr:nth-child(odd) {
+     background-color: var(--secondary-color);
+
+}
+.table-vertical td:not(:last-child),
+.table-vertical th:not(:last-child){
+     border-right: 1px solid var(--secondary-color);
+
+}
+/*imagem logo*/
+.imagem-serliv{
+     width: 4.8rem;
+     height: 4.8rem;
 }
